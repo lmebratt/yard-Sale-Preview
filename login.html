@@ -47,19 +47,6 @@
             margin-bottom: 48px;
             justify-self: center;
         }
-        .title {
-            font-size: var(--lg);
-            margin-bottom: 12px;
-            text-align: center;
-        }
-        .subtitle {
-            color: var(--Dark);
-            font-size: var(--md);
-            font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 32px;
-            text-align: center;
-        }
         .form {
             display: flex;
             flex-direction: column;
@@ -93,10 +80,43 @@
             margin-top: 12px;
             margin-bottom:  30px;
         }
+        .forgot-pass {
+            color: var(--Dark);
+            font-size: var(--sm);
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+        .forgot-pass a {
+            color: var(--Hospital-green);
+            font-weight: 500;
+            font-size: var(--sm);
+            text-decoration: none;
+        }
+        .signup-button {
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--Hospital-green);
+            color: var(--Hospital-green);
+            width: 300px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-self: flex-end;
+            margin-bottom: 20px;
+        }
 
         @media (min-width: 600px) {
             .logo {
                 display: none;
+            }
+            .login {
+                align-content: center;
             }
         }
     </style>
@@ -105,16 +125,18 @@
     <main class="login">
         <div class="form-container">
             <img class="logo" src="./logos/logo_yard_sale.svg" alt="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
             <form action="" class="form">
+                <label for="e-mail" class="label">Password</label>
+                <input type="email" id="e-mail" placeholder="example@email.com" class="input input-password">
+                
                 <label for="password" class="label">Password</label>
                 <input type="password" id="password" placeholder="******" class="input input-password">
-                <label for="new-password" class="label">Re-enter Password</label>
-                <input type="password" id="new-password" placeholder="******" class="input input-password">
-                <input type="submit" value="Confirm new password" class="primary-button login-button">
+                
+                <input type="submit" value="Log in" class="primary-button login-button">
             </form>
+            <p class="forgot-pass"><a href="/">Forgot my password</a></p>
         </div>
+        <button class="signup-button">Sign up</button>
     </main>
 </body>
 </html>
