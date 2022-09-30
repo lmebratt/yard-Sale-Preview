@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,9 +31,17 @@
         body {
             font-family: 'Quicksand', sans-serif;
         }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+            border: solid 2px var(--text-input-field);
+            padding: 0 12px;
+        }
         .login {
             width: 100%;
-            height: 100vh;
+            height: 100%;
             display: grid;
             place-items: center;
         }
@@ -41,13 +49,20 @@
             display: grid;
             grid-template-rows: auto 1fr auto;
             width: 300px;
+            height: 90vh;
         }
-        .logo {
-            width: 150px;
-            margin-bottom: 48px;
-            justify-self: center;
+        .title {
+            font-size: var(--lg);
+            margin-top: 20px;
+            margin-bottom: 32px;
+            text-align: left;
         }
         .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .form div {
             display: flex;
             flex-direction: column;
         }
@@ -78,65 +93,41 @@
         }
         .login-button {
             margin-top: 12px;
-            margin-bottom:  30px;
-        }
-        .forgot-pass {
-            color: var(--Dark);
-            font-size: var(--sm);
-            font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 32px;
-            text-align: center;
-        }
-        .forgot-pass a {
-            color: var(--Hospital-green);
-            font-weight: 500;
-            font-size: var(--sm);
-            text-decoration: none;
-        }
-        .signup-button {
-            background-color: var(--white);
-            border-radius: 8px;
-            border: 1px solid var(--Hospital-green);
-            color: var(--Hospital-green);
-            width: 300px;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 48px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-self: flex-end;
-            margin-bottom: 20px;
         }
 
         @media (min-width: 600px) {
-            .logo {
+            .nav-bar {
                 display: none;
             }
-            .login {
-                align-content: center;
-            }
+            .form {
+            justify-content: flex-start;
+        }
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav class="nav-bar">
+            <img src="./icons/icon_menu.svg" alt="menu">
+            <img src="./logos/logo_yard_sale.svg" alt="yardSale">
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="cart">
+        </nav>
+    </header>
     <main class="login">
         <div class="form-container">
-            <img class="logo" src="./logos/logo_yard_sale.svg" alt="logo">
+            <h1 class="title">My account</h1>
             <form action="" class="form">
-                <label for="e-mail" class="label">Password</label>
-                <input type="email" id="e-mail" placeholder="email@example.com" class="input input-password">
-                
-                <label for="password" class="label">Password</label>
-                <input type="password" id="password" placeholder="******" class="input input-password">
-                
-                <input type="submit" value="Log in" class="primary-button login-button">
+                <div>
+                    <label for="name" class="label">Name</label>
+                    <input type="text" id="name" placeholder="name" class="input input-password" required>
+                    <label for="email" class="label">Email address</label>
+                    <input type="email" id="email" placeholder="email@example.com" class="input input-password" required>
+                    <label for="password" class="label">Password</label>
+                    <input type="password" id="password" placeholder="******" class="input input-password" required>    
+                </div>
+                <input type="submit" value="Save" class="primary-button login-button">
             </form>
-            <p class="forgot-pass"><a href="/">Forgot my password</a></p>
         </div>
-        <button class="signup-button">Sign up</button>
     </main>
 </body>
 </html>
