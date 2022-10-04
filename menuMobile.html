@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --Dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.6rem;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+            border: solid 2px var(--text-input-field);
+            padding: 0 12px;
+        }
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+            height: 93vh;
+        }
+        .mobile-menu a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: bold;
+        }
+        .mobile-menu ul {
+            list-style: none;
+            margin: 24px 0 0;
+        }
+        .mobile-menu ul:nth-child(1) {
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+        .mobile-menu ul:not(:last-child) li {
+            margin-bottom: 24px;
+        }
+        .mobile-menu ul:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 100%;
+            margin-bottom: 24px;
+        }
+        .mobile-menu .email {
+            font-size: var(--sm);
+            font-weight: 300;
+        }
+        .mobile-menu .sign-out {
+            color: var(--Hospital-green);
+            font-size: var(--sm);
+        }
+        .input-search {
+            font-size: var(--sm);
+            color: var(--text-input-field);
+            background-color: var(--text-input-field);
+            height: 36px;
+            width: 95%;
+            margin-top: 8px;
+            border: none;
+            border-radius: 4px;
+            display: flex;
+            align-self: flex-start;
+            align-items: center;
+        }
+        
+        @media (min-width: 600px) {
+            .nav-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="./icons/icon_menu.svg" alt="menu">
+            <img src="./logos/logo_yard_sale.svg" alt="yardSale">
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="cart">
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li>
+                    <a href="/" class="title">CATEGORIES</a>
+                </li>
+                <li>
+                    <a href="/" class="title">All</a>
+                </li>
+                <li>
+                    <a href="/" class="title">Clothes</a>
+                </li>
+                <li>
+                    <a href="/" class="title">Electronics</a>
+                </li>
+                <li>
+                    <a href="/" class="title">Furnitures</a>
+                </li>
+                <li>
+                    <a href="/" class="title">Toys</a>
+                </li>
+                <li>
+                    <a href="/" class="title">Others</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/" class="title">My orders</a>
+                </li>
+                <li>
+                    <a href="/" class="title">My account</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="/" class="email">email@example.com</a>
+                </li>
+                <li>
+                    <a href="/" class="sign-out">sign out</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main></main>
+</body>
+</html>

@@ -29,6 +29,7 @@
             font-size: 62.5%;
         }
         body {
+            font-size: 1.6rem;
             font-family: 'Quicksand', sans-serif;
         }
         .nav-bar {
@@ -38,6 +39,36 @@
             height: 48px;
             border: solid 2px var(--text-input-field);
             padding: 0 12px;
+        }
+        .desktop-menu {
+            width: 100px;
+            height: auto;
+            border: 1px solid var(--very-light-pink);
+            border-radius: 6px;
+            padding: 20px 20px 0 20px;
+        }
+        .desktop-menu ul {
+            list-style: none;
+        }
+        .desktop-menu ul li {
+            text-align: end;
+        }
+        .desktop-menu ul li:last-child {
+            padding-top: 12px;
+            border-top: 1px solid var(--very-light-pink);
+        }
+        .desktop-menu ul li:last-child a {
+            color: var(--Hospital-green);
+            font-size: var(--sm);
+        }
+        .desktop-menu ul li:not(:last-child) a {
+            color: var(--black);
+        }
+        .desktop-menu ul li a {
+            display: inline-block;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: bold;
         }
         .input-search {
             font-size: var(--sm);
@@ -91,9 +122,9 @@
         }
 
         @media (min-width: 600px) {
-            .nav-bar {
+            /* .nav-bar {
                 display: none;
-            }
+            } */
             .main-cards {
             grid-template-columns: repeat(auto-fill, 240px);
             }
@@ -114,6 +145,19 @@
             <img src="./logos/logo_yard_sale.svg" alt="yardSale">
             <img src="./icons/icon_shopping_cart_notification.svg" alt="cart">
         </nav>
+        <div class="desktop-menu">
+            <ul>
+                <li>
+                    <a href="/" class="title">My orders</a>
+                </li>
+                <li>
+                    <a href="/" class="title">My account</a>
+                </li>
+                <li>
+                    <a href="/" class="title">sign out</a>
+                </li>
+            </ul>
+        </div>
         <input type="search" placeholder="Search product" class="input-search">
     </header>
     <main class="main-container">
