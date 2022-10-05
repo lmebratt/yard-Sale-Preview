@@ -63,18 +63,15 @@
             justify-content: space-between;
             flex-direction: row;
             align-items: center;
-            background-color: var(--text-input-field);
-            border-radius: 12px;
             width: 90%;
             height: 72px;
-            margin: 10px 24px;
-            padding: 0 10px;
+            margin: 10px 24px 0;
         }
         .resume p {
             display: flex;
             flex-direction: column
         }
-        .resume p span:nth-child(1), .resume > p {
+        .resume p span:nth-child(1), .resume p {
             font-size: var(--md);
             font-weight: bold;
         }
@@ -82,35 +79,10 @@
             font-size: var(--sm);
             color: var(--very-light-pink);
         }
-        .product-card {
+        .resume div {
             display: flex;
             justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
-            width: 90%;
-            height: 104px;
-            margin: 0 24px;
-            padding-right: 10px;
-        }
-        .product-description{
-            display: flex;
-            align-items: center;
-            width: 50%
-        }
-        .product-description img {
-            width: 90px;
-            height: 90px;
-            margin-right: 24px;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-        .product-description P {
-            font-size: var(--sm);
-            color: var(--very-light-pink);
-        }
-        .product-card > p {
-            font-weight: bold;
-            font-size: var(--md);
+            width: 25%;
         }
         
         @media (min-width: 600px) {
@@ -137,56 +109,64 @@
     <header>
         <nav class="nav-bar">
             <img src="./icons/icon_menu.svg" alt="menu">
-            <h1>My Order</h1>
+            <h1>My Orders</h1>
             <img src="./icons/icon_shopping_cart_notification.svg" alt="cart">
         </nav>
     </header>
     <main class="login">
         <div class="container">
             <div class="order">
-                <h1>My Order</h1>
+                <h1>My Orders</h1>
             </div>
             <div class="resume">
                 <p>
                     <span>dd.mm.aaaa</span>
                     <span>x article</span>
                 </p>
-                <p>$0.000,00</p>
-            </div>
-            <div class="product-card">
-                <div class="product-description">
-                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    <p>bike</p>
+                <div>
+                    <p>$0.000,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </div>
-                <p>$120,00</p>
             </div>
-            <div class="product-card">
-                <div class="product-description">
-                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    <p>bike</p>
+            <div class="resume">
+                <p>
+                    <span>dd.mm.aaaa</span>
+                    <span>x article</span>
+                </p>
+                <div>
+                    <p>$0.000,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </div>
-                <p>$120,00</p>
             </div>
-            <div class="product-card">
-                <div class="product-description">
-                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    <p>bike</p>
+            <div class="resume">
+                <p>
+                    <span>dd.mm.aaaa</span>
+                    <span>x article</span>
+                </p>
+                <div>
+                    <p>$0.000,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </div>
-                <p>$120,00</p>
             </div>
-            <div class="product-card">
-                <div class="product-description">
-                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    <p>bike</p>
+            <div class="resume">
+                <p>
+                    <span>dd.mm.aaaa</span>
+                    <span>x article</span>
+                </p>
+                <div>
+                    <p>$0.000,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </div>
-                <p>$120,00</p>
             </div>
-            <div class="product-card">
-                <div class="product-description">
-                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                    <p>bike</p>
+            <div class="resume">
+                <p>
+                    <span>dd.mm.aaaa</span>
+                    <span>x article</span>
+                </p>
+                <div>
+                    <p>$0.000,00</p>
+                    <img src="./icons/flechita.svg" alt="arrow">
                 </div>
-                <p>$120,00</p>
             </div>
         </div>
     </main>
