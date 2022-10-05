@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --Dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-size: 1.6rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+            border: solid 2px var(--text-input-field);
+            padding: 0 12px;
+        }
+        .nav-bar h1 {
+            font-size: var(--md);
+        }
+        .login {
+            width: 100%;
+            height: 92vh;
+            display: grid;
+            place-items: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 460px;
+            height: 100%;
+        }
+        .order {
+            display: none;
+        }
+        .order h1 {
+            font-size: var(--lg);
+            font-weight: bold;
+        }
+        .resume {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            background-color: var(--text-input-field);
+            border-radius: 12px;
+            width: 90%;
+            height: 72px;
+            margin: 10px 24px;
+            padding: 0 10px;
+        }
+        .resume div p:nth-child(1), .resume > p {
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        .resume div p:last-child {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+        .product-card {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            width: 90%;
+            height: 104px;
+            margin: 0 24px;
+            padding-right: 10px;
+        }
+        .product-description{
+            display: flex;
+            align-items: center;
+            width: 50%
+        }
+        .product-description img {
+            width: 90px;
+            height: 90px;
+            margin-right: 24px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .product-description P {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+        .product-card > p {
+            font-weight: bold;
+            font-size: var(--md);
+        }
+        
+        @media (min-width: 600px) {
+            .nav-bar {
+                display: none;
+            }
+            .order {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            height: 72px;
+            margin: 28px 24px 0;
+            padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="./icons/icon_menu.svg" alt="menu">
+            <h1>My Order</h1>
+            <img src="./icons/icon_shopping_cart_notification.svg" alt="cart">
+        </nav>
+    </header>
+    <main class="login">
+        <div class="container">
+            <div class="order">
+                <h1>My Order</h1>
+            </div>
+            <div class="resume">
+                <div>
+                    <p>DD.MM.AAAA</p>
+                    <p>x article</p>
+                </div>
+                <p>Suma (articles)</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <p>$120,00</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <p>$120,00</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <p>$120,00</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <p>$120,00</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <p>$120,00</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
