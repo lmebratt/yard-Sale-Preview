@@ -58,10 +58,6 @@
         .order {
             display: none;
         }
-        .order h1 {
-            font-size: var(--lg);
-            font-weight: bold;
-        }
         .resume {
             display: flex;
             justify-content: space-between;
@@ -74,11 +70,15 @@
             margin: 10px 24px;
             padding: 0 10px;
         }
-        .resume div p:nth-child(1), .resume > p {
+        .resume p {
+            display: flex;
+            flex-direction: column
+        }
+        .resume p span:nth-child(1), .resume > p {
             font-size: var(--md);
             font-weight: bold;
         }
-        .resume div p:last-child {
+        .resume p span:last-child {
             font-size: var(--sm);
             color: var(--very-light-pink);
         }
@@ -126,6 +126,10 @@
             margin: 28px 24px 0;
             padding: 0 10px;
             }
+            .order h1 {
+            font-size: var(--lg);
+            font-weight: bold;
+            }
         }
     </style>
 </head>
@@ -143,11 +147,11 @@
                 <h1>My Order</h1>
             </div>
             <div class="resume">
-                <div>
-                    <p>DD.MM.AAAA</p>
-                    <p>x article</p>
-                </div>
-                <p>Suma (articles)</p>
+                <p>
+                    <span>DD.MM.AAAA</span>
+                    <span>x article</span>
+                </p>
+                <p>$0.000,00</p>
             </div>
             <div class="product-card">
                 <div class="product-description">
