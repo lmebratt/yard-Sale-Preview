@@ -40,7 +40,7 @@
             align-items: center;
             height: 48px;
             border: solid 2px var(--text-input-field);
-            padding: 0 12px;
+            padding: 0 20px;
         }
         .profile, .filters {
             display: none;
@@ -61,18 +61,29 @@
                 width: 95%;
                 list-style: none;
             }
-            .filters li {
+            .filters li > a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 font-size: var(--sm);
                 color: var(--very-light-pink);
-                margin-right: 12px;
+                text-decoration: none;
+                border: 1px solid var(--white);
+                border-radius: 12px;
+                height: 28px;
+                padding: 10px;
             }
-            .filters li:checked {
+            .filters li > a:hover {
                 color: var(--Hospital-green);
+                border: 1px solid var(--Hospital-green);
             }
             .profile {
                 display: flex;
                 align-items: center;
+                justify-content: space-around;
                 font-size: var(--sm);
+                width: 160px;
+                margin-right: 12px;
             }
         }
     </style>
@@ -83,11 +94,11 @@
             <img src="./icons/icon_menu.svg" alt="menu">
             <img src="./logos/logo_yard_sale.svg" alt="yardSale">
             <ul class="filters">
-                <li>All</li>
-                <li>Clothes</li>
-                <li>Electronics</li>
-                <li>Toys</li>
-                <li>Others</li>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Clothes</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Toys</a></li>
+                <li><a href="#">Others</a></li>
             </ul>
             <div class="profile">
                 <p>
