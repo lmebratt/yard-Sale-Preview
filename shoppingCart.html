@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --Dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            font-size: 1.6rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 450px;
+            height: 100%;
+        }
+        .shop {
+            display: none;
+        }
+        .product-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 12px 0;
+        }
+        .product-description{
+            display: flex;
+            align-items: center;
+        }
+        .product-description img {
+            width: 90px;
+            height: 90px;
+            margin-right: 24px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .product-description P {
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+        .product-price {
+            display: flex;
+        }
+        .product-price p {
+            font-weight: bold;
+            font-size: var(--md);
+            margin-right: 14px;
+        }
+        .resume {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--text-input-field);
+            border-radius: 12px;
+            height: 72px;
+            padding: 0 10px;
+        }
+        .resume p {
+            display: flex;
+            flex-direction: column;
+            font-size: var(--md);
+            font-weight: bold;
+
+        }
+        .shopping {
+            display: grid;
+            height: 20%;
+        }
+        .shopping button {
+            background-color: var(--Hospital-green);
+            color: var(--white);
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
+        
+        @media (min-width: 600px) {
+            body {
+                align-items: flex-end;
+            }
+            .container {
+                margin-right: 12px;
+            }
+            .shop {
+                display: flex;
+                align-items: center;
+            }
+            .shop img {
+                rotate: 180deg;
+                height: 15px;
+                width: 15px;
+                margin: 12px;
+            }
+            .shop p {
+                font-size: var(--lg);
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main class="container">
+        <div class="box">
+            <div class="shop">
+                <img src="./icons/flechita.svg" alt="back">
+                <p>Shopping cart</p>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <div class="product-price">
+                    <p>$120,00</p>
+                    <picture>
+                        <img src="./icons/icon_close.png" alt="close">
+                    </picture>    
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <div class="product-price">
+                    <p>$120,00</p>
+                    <picture>
+                        <img src="./icons/icon_close.png" alt="close">
+                    </picture>    
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <div class="product-price">
+                    <p>$120,00</p>
+                    <picture>
+                        <img src="./icons/icon_close.png" alt="close">
+                    </picture>    
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-description">
+                    <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                    <p>bike</p>
+                </div>
+                <div class="product-price">
+                    <p>$120,00</p>
+                    <picture>
+                        <img src="./icons/icon_close.png" alt="close">
+                    </picture>    
+                </div>
+            </div>
+        </div>
+        <div class="shopping" >
+            <div class="resume">
+                <p>Total</p>
+                <p>$0.000,00</p>
+            </div>    
+            <button>Checkout</button>
+        </div>
+    </main>
+</body>
+</html>
