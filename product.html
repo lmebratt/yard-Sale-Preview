@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --Dark: #232830;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --Hospital-green: #ACD9B2;
+            --sm: 1.4rem;
+            --md: 1.6rem;
+            --lg: 1.8rem;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+        }
+        body {
+            font-size: 1.6rem;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        .product-detail {
+            display: grid;
+            align-content: space-between;
+            max-width: 500px;
+            height: 100%;
+            position: relative;
+        }
+        .product-detail figure {
+            display: none;
+        }
+        .product-detail picture img {
+            width: 100%;
+            height: 350px;
+            border-radius: 0 0 16px 16px;
+            object-fit: cover;
+        }
+        .product-description {
+            padding: 0 12px 24px;
+        }
+        .product-description p:nth-child(1) {
+            font-size: var(--lg);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .product-description p:not(:first-child) {
+            font-size: var(--md);
+            color: var(--Dark);
+            margin-bottom: 24px;
+        }
+        .shopping {
+            display: grid;
+            height: 100%;
+            padding: 0 12px 24px;
+        }
+        .shopping button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--Hospital-green);
+            color: var(--white);
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 48px;
+        }
+                
+        @media (min-width: 600px) {
+            .container {
+                align-items:flex-end;
+            }
+            .product-detail figure {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                background-color: var(--white);
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                border: 1px solid var(--text-input-field);
+                position: absolute;
+                top: 12px;
+                left: 12px;
+                cursor: pointer;
+            }
+            .product-detail figure img {
+                height: 50%;
+                width: 50%;
+            }    
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <aside class="product-detail">
+            <figure>
+                <img src="./icons/icon_close.png" alt="close">
+            </figure>    
+            <picture>
+                <img src="https://images.pexels.com/photos/255934/pexels-photo-255934.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            </picture>
+            <div class="product-description">
+                <p>$120,00</p>
+                <p>bike</p>
+                <p>bicycle, also called bike, two-wheeled steerable machine that is pedaled by the rider's feet. On a standard bicycle the wheels are mounted in-line in a metal frame, with the front wheel held in a rotatable fork. The rider sits on a saddle and steers by leaning and turning handlebars that are attached to the fork.</p>
+            </div>
+            <div class="shopping" >
+                <button><img src="./icons/bt_add_to_cart.svg" alt="cart"> Add to cart</button>
+            </div>
+        </aside>
+    </main>
+</body>
+</html>
